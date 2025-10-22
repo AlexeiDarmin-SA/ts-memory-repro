@@ -3,6 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+// heavy.ts
+function wrap<T>(x: T) { return { top: x, right: x, bottom: x, left: x }; }
+
+// 9–10 wraps is usually enough. If it doesn't fail at 9, try 10 or 11.
+export const box =
+  wrap(wrap(wrap(wrap(wrap(wrap(wrap(wrap(wrap("x"))))))))); // 9 wraps
+
+
+
 function App() {
   const [count, setCount] = useState(0)
 
